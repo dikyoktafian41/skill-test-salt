@@ -1,0 +1,34 @@
+.logo {
+  max-width: 100px;
+}
+
+.user {
+  .name {
+    line-height: normal;
+  }
+  .role {
+    font-size: 0.7rem;
+    line-height: normal;
+  }
+}
+
+@media (min-width: 768px) {
+  
+  .navbar-nav {
+    margin: 0 -15px;
+    .nav-item:after {
+      content: '/';
+      position: absolute;
+      top: 50%;
+      right: -3px;
+      transform: translateY(-50%);
+    }
+    .nav-item:last-child:after {
+      content: '';
+    }
+    .nav-item {
+      position: relative;
+      padding: 0 15px;
+    }
+  }
+}

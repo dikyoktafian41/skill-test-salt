@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+@import "bootstrap/scss/bootstrap";
+
+.input-icon {
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .w-md-100 {
+    width: 100%;
+  }
+}

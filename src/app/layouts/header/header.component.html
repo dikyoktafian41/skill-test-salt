@@ -1,1 +1,76 @@
-<p>header works!</p>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="align-items-baseline container-fluid flex-md-column justify-content-lg-start p-0">
+    <div class="align-items-center d-flex px-3 w-md-100">
+      <a class="navbar-brand" [routerLink]="['/']" >
+        <img src="./assets/logo.png" alt="logo" class="logo">
+      </a>
+      <div class="d-none d-md-flex position-relative w-100 mx-2">
+        <input type="search" class="form-control pe-4" placeholder="Find">
+        <fa-icon class="position-absolute input-icon" icon="search"></fa-icon>
+      </div>
+      <div class="d-none d-md-flex mx-2">
+        <button type="button" class="btn btn-primary btn-sm d-flex"><fa-icon icon="upload" class="me-2"></fa-icon> Upload</button>
+      </div>
+      <div class="d-none d-md-flex align-items-center d-flex mx-2 user">
+        <button type="button" class="btn btn-primary btn-sm me-2">
+          <fa-icon icon="user"></fa-icon>
+        </button>
+        <div class="d-flex flex-column justify-content-start">
+          <span class="d-inline-block name">John</span>
+          <span class="d-inline-block role">Admin</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="border-lg-top position-relative px-3 text-end w-100" style="margin-top: -50px;">
+      <button class="navbar-toggler" type="button" (click)="isShowMenu = !isShowMenu"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-start" [ngClass]="{show: isShowMenu}" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a [routerLink]="['/']" class="nav-link">Video</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/']" class="nav-link">People</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/']" class="nav-link">Documents</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/']" class="nav-link">Events</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/']" class="nav-link">Communities</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/']" class="nav-link">Favorites</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/']" class="nav-link">Channels</a>
+          </li>
+        </ul>
+        <div class="position-relative w-100">
+          <input type="search" class="form-control pe-4" placeholder="Find">
+          <fa-icon class="position-absolute input-icon" icon="search"></fa-icon>
+        </div>
+        <div class="d-flex justify-content-between mt-3">
+          <div>
+            <button type="button" class="btn btn-primary btn-sm d-flex"><fa-icon icon="upload" class="me-2"></fa-icon> Upload</button>
+          </div>
+          <div class="align-items-center d-flex user">
+            <button type="button" class="btn btn-primary btn-sm me-2">
+              <fa-icon icon="user"></fa-icon>
+            </button>
+            <div class="d-flex flex-column justify-content-start">
+              <span class="d-inline-block name">John</span>
+              <span class="d-inline-block role">Admin</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
