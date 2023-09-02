@@ -1,3 +1,5 @@
+import 'zone.js'; // ! For fix error Stackblitz 
+
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
