@@ -1,0 +1,39 @@
+.sosmed {
+  display: flex;
+  .box {
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+  }
+}
+
+.menu {
+  padding: 0;
+  margin: 20px 0;
+  display: inline-flex;
+  list-style: none;
+  flex-wrap: wrap;
+  li {
+    position: relative;
+  }
+  li:after {
+    content: '/';
+    position: absolute;
+    top: 50%;
+    right: -3px;
+    transform: translateY(-50%);
+  }
+  li:last-child:after {
+    content: '';
+  }
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 0 0.5rem;
+  }
+}
+

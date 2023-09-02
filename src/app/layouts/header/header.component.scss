@@ -13,7 +13,6 @@
 }
 
 @media (min-width: 768px) {
-  
   .navbar-nav {
     margin: 0 -15px;
     .nav-item:after {
@@ -30,5 +29,15 @@
       position: relative;
       padding: 0 15px;
     }
+  }
+
+  .navbar-expand-md .navbar-collapse {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu {
+    margin-top: -50px
   }
 }

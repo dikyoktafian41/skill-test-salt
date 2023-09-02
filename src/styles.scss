@@ -9,6 +9,12 @@
   transform: translateY(-50%);
 }
 
+.text-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media (min-width: 768px) {
   .w-md-100 {
     width: 100%;
