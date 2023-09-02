@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { fontAwesomeIcons } from './config/font-awesome-icons';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,16 @@ import { FooterComponent } from './layouts/footer/footer.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(
+    iconLibrary: FaIconLibrary,
+  ) {
+    iconLibrary.addIcons(...fontAwesomeIcons);
+
+  }
+}
