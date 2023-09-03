@@ -14,22 +14,21 @@ import { IActivity } from '../model/activity.model';
 })
 export class HomeServiceService {
   protected API_KEY_NEWS = 'cc83528e109c46a7aa1c891feeb9ccf5'
-  protected resourceUrl = this.applicationConfigService.getEndpointFor(`https://newsapi.org/v2/top-headlines`); // country=id&apiKey=${this.API_KEY_NEWS}
+  protected resourceUrl = this.applicationConfigService.getEndpointFor(`https://newsapi.org/v2/top-headlines`);
 
   constructor(protected http: HttpClient, protected applicationConfigService: ApplicationConfigService, protected newsAdapter: NewsAdapter) {
-    this.resourceUrl += `?apiKey=${this.API_KEY_NEWS}`
   }
 
   getNews(req?: any): Observable<HttpResponse<INews[]>> {
     const options = createRequestOption(req);
-    return this.http.get<INewsREST>(this.resourceUrl, { params: options, observe: 'response' }).pipe(
+    return this.http.get<INewsREST>(this.resourceUrl, { params: options, observe: 'response', headers:{ Authorization: `Bearer ${this.API_KEY_NEWS}` } }).pipe(
       map(res => this.newsAdapter.news(res))
     );
   }
 
   getActivity(req?: any): Observable<HttpResponse<IActivity[]>> {
     const options = createRequestOption(req);
-    return this.http.get<INewsREST>(this.resourceUrl, { params: options, observe: 'response' }).pipe(
+    return this.http.get<INewsREST>(this.resourceUrl, { params: options, observe: 'response', headers:{ Authorization: `Bearer ${this.API_KEY_NEWS}` } }).pipe(
       map(res => this.newsAdapter.activity(res))
     );
   }
