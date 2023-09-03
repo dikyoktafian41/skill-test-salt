@@ -7,35 +7,11 @@
         <a href="javascript;;" class="text-black text-decoration-none text-end text-lg-center w-100">Browse all videos</a>
       </div>
       <div class="content">
-        <div class="box div1">
-          <h3>How to improve your skill</h3>
+        <div class="box div{{i+1}}" *ngFor="let item of videos; let i = index">
+          <h3 *ngIf="i == 0">{{ item.title }}</h3>
           <div class="d-flex justify-content-between">
-            <span class="small">John Doe</span>
-            <span class="small">1542 Views</span>
-          </div>
-        </div>
-        <div class="box div2">
-          <div class="d-flex justify-content-between">
-            <span class="small">John Doe</span>
-            <span class="small">1542 Views</span>
-          </div>
-        </div>
-        <div class="box div3">
-          <div class="d-flex justify-content-between">
-            <span class="small">John Doe</span>
-            <span class="small">1542 Views</span>
-          </div>
-        </div>
-        <div class="box div4">
-          <div class="d-flex justify-content-between">
-            <span class="small">John Doe</span>
-            <span class="small">1542 Views</span>
-          </div>
-        </div>
-        <div class="box div5">
-          <div class="d-flex justify-content-between">
-            <span class="small">John Doe</span>
-            <span class="small">1542 Views</span>
+            <span class="small">{{ item.author }}</span>
+            <span class="small">{{ item.views }} Views</span>
           </div>
         </div>
         <div class="box div6">

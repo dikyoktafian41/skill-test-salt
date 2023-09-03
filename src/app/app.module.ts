@@ -8,6 +8,8 @@ import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { fontAwesomeIcons } from './config/font-awesome-icons';
+import { HttpClientModule } from '@angular/common/http';
+import './config/dayjs';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { fontAwesomeIcons } from './config/font-awesome-icons';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
     FontAwesomeModule,
   ],
   providers: [],
